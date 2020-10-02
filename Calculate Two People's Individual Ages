@@ -1,0 +1,33 @@
+//https://www.codewars.com/kata/58e0bd6a79716b7fcf0013b1/train/javascript
+function getAges(sum,difference){
+  let age2 = (sum - difference) / 2;
+  let age1 = age2 + difference;
+  if (age2 < 0 || difference < 0 ) {
+    return null; 
+  } else {    
+      return [age1, age2];
+    }
+}
+
+second solution
+
+
+function getAges(sum,difference){
+let age2 = (sum - difference) / 2;
+  let age1 = age2 + difference;
+  if (sum < 0 || difference < 0 || age2 < 0 || age1 < 0){ 
+    return null; 
+  } else {    
+  return [age1, age2];
+  }
+}
+
+Third solution 
+
+
+function getAges(sum,difference){
+  if (sum < 0 || difference < 0 ||(sum - difference) < 0) return null;
+  let age1 = (sum - difference) / 2;
+  let age2 = sum - age1;
+  return (age1 < age2)? [age2, age1] : [age1, age2];
+}
